@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Géneros</title>
+    <!-- Agregar enlaces a las bibliotecas de Bootstrap y CSS personalizado -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegación de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Plataforma Literaria</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="explorar.html">Explorar</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../administrador.html">Panel de Control</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+        <h1>CRUD de Géneros</h1>
+        
+        <!-- Formulario para crear o editar géneros -->
+        <div class="mb-3">
+            <button class="btn btn-success" data-toggle="modal" data-target="#crearEditarGeneroModal">Agregar Género</button>
+        </div>
+        
+        <!-- Tabla para listar géneros -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se listarían los géneros existentes (debes obtenerlos desde tu base de datos) -->
+                <tr>
+                    <td>1</td>
+                    <td>Novela</td>
+                    <td>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#crearEditarGeneroModal">Editar</button>
+                        <button class="btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+                <!-- ... (filas adicionales para otros géneros) -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal para crear o editar géneros -->
+    <div class="modal fade" id="crearEditarGeneroModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar/Editar Género</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario para agregar o editar géneros -->
+                    <form>
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre del género">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p>Derechos de autor © 2023 Plataforma Literaria. Todos los derechos reservados.</p>
+            <p><a href="#">Política de Privacidad</a> | <a href="#">Términos y Condiciones</a></p>
+        </div>
+    </footer>
+
+    <!-- Incluir las bibliotecas de Bootstrap y jQuery para el funcionamiento de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

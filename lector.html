@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Lector - Plataforma Literaria</title>
+    <!-- Agregar enlaces a las bibliotecas de Bootstrap y CSS personalizado -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo para las imágenes de los autores */
+        .author img {
+            max-width: 100px; /* Tamaño máximo de la imagen */
+            height: auto; /* Mantener la relación de aspecto */
+        }
+        /* Estilo para el contenedor de autor */
+        .author-container {
+            display: flex; /* Mostrar elementos en una fila */
+            align-items: center; /* Centrar verticalmente los elementos */
+            margin-bottom: 10px; /* Espacio entre cada autor */
+        }
+
+        /* Estilo para el margen a la derecha del autor */
+        .author-name {
+            margin-right: 20px; /* Espacio a la derecha del nombre del autor */
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Plataforma Literaria</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="explorar.html">Explorar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- Información del Lector -->
+                <div class="card">
+                    <img src="images/autor.jpg" class="card-img-top" alt="Avatar del Lector">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre del Lector</h5>
+                        <p class="card-text">Correo Electrónico: lector@example.com</p>
+                        <h6>Autores Preferidos</h6>
+                        <div class="author-container">
+                            <div class="author">
+                                <a href="escritor.html">
+                                    <img src="images/autor.jpg" alt="Autor 1" class="rounded-circle">
+                                </a>
+                            </div>
+                            <div class="author-name">
+                                <a href="escritor.html">Autor 1</a>
+                            </div>
+                        </div>
+                        <div class="author-container">
+                            <div class="author">
+                                <a href="escritor.html">
+                                    <img src="images/autor.jpg" alt="Autor 2" class="rounded-circle">
+                                </a>
+                            </div>
+                            <div class="author-name">
+                                <a href="escritor.html">Autor 2</a>
+                            </div>
+                        </div>
+                        <div class="author-container">
+                            <div class="author">
+                                <a href="escritor.html">
+                                    <img src="images/autor.jpg" alt="Autor 3" class="rounded-circle">
+                                </a>
+                            </div>
+                            <div class="author-name">
+                                <a href="escritor.html">Autor 3</a>
+                            </div>
+                        </div>
+                        <!-- Puedes agregar más autores preferidos según sea necesario -->
+                    </div>
+                    <a href="editar_perfil_lector.html" class="btn btn-primary">Editar Perfil</a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <!-- Lista de Publicaciones Favoritas -->
+                <h2>Publicaciones Favoritas</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <img src="images/imagen.jpg" class="card-img-top" alt="Portada del Libro 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Título del Libro 1</h5>
+                                <p class="card-text">Descripción breve del libro 1.</p>
+                                <a href="publicacion.html" class="btn btn-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <img src="images/imagen.jpg" class="card-img-top" alt="Portada del Libro 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Título del Libro 2</h5>
+                                <p class="card-text">Descripción breve del libro 2.</p>
+                                <a href="publicacion.html" class="btn btn-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Puedes agregar más tarjetas para otras publicaciones favoritas -->
+                </div>
+
+                <!-- Autores Famosos -->
+                <h2>Escritores Favoritos</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/autor.jpg" class="card-img-top" alt="Foto del Autor 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Autor 1</h5>
+                                <p class="card-text">Descripción breve del Autor 1.</p>
+                                <a href="escritor.html" class="btn btn-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/autor.jpg" class="card-img-top" alt="Foto del Autor 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Administrador</h5>
+                                <p class="card-text">Descripción breve del Administrador.</p>
+                                <a href="escritor.html" class="btn btn-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="images/autor.jpg" class="card-img-top" alt="Foto del Autor 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Lector</h5>
+                                <p class="card-text">Descripción breve del Lector.</p>
+                                <a href="escritor.html" class="btn btn-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lista de Publicaciones Recomendadas -->
+                <h1></h1>
+                <h2>Publicaciones Recomendadas</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="images/imagen.jpg" class="card-img-top" alt="Portada del Libro 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Título del Libro 1</h5>
+                            <p class="card-text">Descripción breve del libro 1.</p>
+                            <a href="publicacion.html" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/imagen.jpg" class="card-img-top" alt="Portada del Libro 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Título del Libro 2</h5>
+                            <p class="card-text">Descripción breve del libro 2.</p>
+                            <a href="publicacion.html" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="images/imagen.jpg" class="card-img-top" alt="Portada del Libro 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Título del Libro 3</h5>
+                            <p class="card-text">Descripción breve del libro 3.</p>
+                            <a href="publicacion.html" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <!-- Puedes agregar más tarjetas para otras publicaciones favoritas -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p>Derechos de autor © 2023 Plataforma Literaria. Todos los derechos reservados.</p>
+            <p><a href="#">Política de Privacidad</a> | <a href="#">Términos y Condiciones</a></p>
+        </div>
+    </footer>
+
+    <!-- Incluir las bibliotecas de Bootstrap y jQuery para el funcionamiento de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - Plataforma Literaria</title>
+    <!-- Agregar enlaces a las bibliotecas de Bootstrap y CSS personalizado -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegación de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Plataforma Literaria</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Explorar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="registro.html">Registrarse <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Registrarse
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Contraseña</label>
+                                <input type="password" class="form-control" id="password" placeholder="Ingrese una contraseña segura" required>
+                                <div id="password-strength-meter">
+                                    <div class="strength-meter-fill"></div>
+                                </div>
+                                <small id="password-strength-text" class="form-text text-muted"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm_password">Confirmar Contraseña</label>
+                                <input type="password" class="form-control" id="confirm_password" placeholder="Confirme la contraseña" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rol">Seleccionar Rol</label>
+                                <select class="form-control" id="rol" required>
+                                    <option value="lector">Lector</option>
+                                    <option value="escritor">Escritor</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Registrarse</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p>Derechos de autor © 2023 Plataforma Literaria. Todos los derechos reservados.</p>
+            <p><a href="#">Política de Privacidad</a> | <a href="#">Términos y Condiciones</a></p>
+        </div>
+    </footer>
+
+    <!-- Incluir las bibliotecas de Bootstrap y jQuery para el funcionamiento de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Agregar JavaScript para medidor de seguridad de contraseña -->
+    <script src="password-strength-meter.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Administrador</title>
+    <!-- Agregar enlaces a las bibliotecas de Bootstrap y CSS personalizado -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Barra de navegación de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Plataforma Literaria</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="explorar.html">Explorar</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="administrador.html">Panel de Control</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+        <h1>Panel de Control - Administrador</h1>
+        <div class="list-group">
+            <!-- Enlaces a las páginas de CRUD -->
+            <a href="crud/escritor.html" class="list-group-item list-group-item-action">Gestionar Escritores</a>
+            <a href="crud/fragmento.html" class="list-group-item list-group-item-action">Gestionar Fragmentos</a>
+            <a href="crud/genero.html" class="list-group-item list-group-item-action">Gestionar Géneros</a>
+            <a href="crud/lector.html" class="list-group-item list-group-item-action">Gestionar Lectores</a>
+            <a href="crud/obra_literaria.html" class="list-group-item list-group-item-action">Gestionar Obras Literarias</a>
+            <a href="crud/publicacion.html" class="list-group-item list-group-item-action">Gestionar Publicaciones</a>
+        </div>
+    </div>
+
+    <!-- Gráfico de ejemplo -->
+    <div class="container mt-3">
+        <h2>Estadísticas</h2>
+        <canvas id="miGrafico"></canvas>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p>Derechos de autor © 2023 Plataforma Literaria. Todos los derechos reservados.</p>
+            <p><a href="#">Política de Privacidad</a> | <a href="#">Términos y Condiciones</a></p>
+        </div>
+    </footer>
+
+    <!-- Incluir las bibliotecas de Bootstrap y jQuery para el funcionamiento de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script para crear el gráfico -->
+    <script>
+        // Datos para el gráfico (puedes personalizar estos datos)
+        var datosGrafico = {
+            labels: ["Escritores", "Fragmentos", "Géneros", "Lectores", "Obras Literarias", "Publicaciones"],
+            datasets: [{
+                label: 'Cantidad',
+                data: [10, 5, 8, 15, 20, 20], // Ejemplo de datos de cantidad
+                backgroundColor: 'rgba(75, 192, 192, 0.2)', // Color de las barras
+                borderColor: 'rgba(75, 192, 192, 1)', // Borde de las barras
+                borderWidth: 1
+            }]
+        };
+
+        // Configuración del gráfico
+        var opcionesGrafico = {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        };
+
+        // Obtener el contexto del canvas y crear el gráfico
+        var ctx = document.getElementById('miGrafico').getContext('2d');
+        var miGrafico = new Chart(ctx, {
+            type: 'bar', // Tipo de gráfico (barra en este caso)
+            data: datosGrafico,
+            options: opcionesGrafico
+        });
+    </script>
+
+</body>
+</html>

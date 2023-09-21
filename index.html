@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio - Plataforma Literaria</title>
+    <!-- Agregar enlaces a las bibliotecas de Bootstrap y CSS personalizado -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegación de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Plataforma Literaria</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="explorar.html">Explorar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="registro.html">Registrarse</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+        <h1>Bienvenido a la Plataforma Literaria</h1>
+        <p>Descubre nuevas obras literarias y conéctate con escritores emergentes.</p>
+        <a href="explorar.html" class="btn btn-primary">Explorar Obras</a>
+    </div>
+
+    <!-- Publicaciones Populares -->
+    <div class="container mt-5">
+        <h2>Publicaciones Populares</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/imagen.jpg" class="card-img-top" alt="Portada del libro 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Título del Libro 1</h5>
+                        <p class="card-text">Descripción breve del libro 1.</p>
+                        <a href="publicacion.html" class="btn btn-primary">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/imagen.jpg" class="card-img-top" alt="Portada del libro 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Título del Libro 2</h5>
+                        <p class="card-text">Descripción breve del libro 2.</p>
+                        <a href="publicacion.html" class="btn btn-primary">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/imagen.jpg" class="card-img-top" alt="Portada del libro 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Título del Libro 3</h5>
+                        <p class="card-text">Descripción breve del libro 3.</p>
+                        <a href="publicacion.html" class="btn btn-primary">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Autores Famosos -->
+    <div class="container mt-5">
+        <h2>Autores Famosos</h2>
+        <div class="row">
+            <div class="col-md-4" data-destino="escritor.html" onclick="redirigirAPagina(this)">
+                <div class="card">
+                    <img src="images/autor.jpg" class="card-img-top" alt="Foto del Autor 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Autor 1</h5>
+                        <p class="card-text">Descripción breve del Autor 1.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-destino="administrador.html" onclick="redirigirAPagina(this)">
+                <div class="card">
+                    <img src="images/autor.jpg" class="card-img-top" alt="Foto del Autor 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Administrador</h5>
+                        <p class="card-text">Descripción breve del Administrador.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-destino="lector.html" onclick="redirigirAPagina(this)">
+                <div class="card">
+                    <img src="images/autor.jpg" class="card-img-top" alt="Foto del Autor 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Lector</h5>
+                        <p class="card-text">Descripción breve del Lector.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p>Derechos de autor © 2023 Plataforma Literaria. Todos los derechos reservados.</p>
+            <p><a href="#">Política de Privacidad</a> | <a href="#">Términos y Condiciones</a></p>
+        </div>
+    </footer>
+
+    <!-- Incluir las bibliotecas de Bootstrap y jQuery para el funcionamiento de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function redirigirAPagina(elemento) {
+            // Obtener el valor del atributo personalizado 'data-destino'
+            var destino = elemento.getAttribute('data-destino');
+            
+            // Redirigir a la página de destino
+            window.location.href = destino;
+        }
+    </script>
+</body>
+</html>
